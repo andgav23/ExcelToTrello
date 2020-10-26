@@ -6,10 +6,11 @@
 
 import xlwings as xw
 import requests
+import datetime
 import os
 
 def main(numStr):
-    def sendReq(name, nDev):
+    def sendReq(name, nDev, due):
         # функция отправки запроса API Trello
         url = "https://api.trello.com/1/cards"
         # доска КТО '5f7f5031a39ace11ae0cefea'
@@ -19,6 +20,7 @@ def main(numStr):
            'idList': '5f843bbdfa40fd77f31f414c',
            'name' : name,
            'desc' : nDev,
+           'due' : due,
         }
         response = requests.request(
            "POST",
@@ -37,9 +39,12 @@ def main(numStr):
         nDev = f"{wb.sheets[1].range(cellDev).value}"
         # заголовок карточки
         name = f"КВР №{nDoc} {nProd}"
+        # получаем дату завершения
+        due = datetime.datetime.now() + datetime.timedelta(days=1)
         print(f"Заголовок карточки: {name}")
         print(f"Описание: {nDev}")
-        sendReq(name, nDev)
+        print(f"Дата завершения: {due}")
+        sendReq(name, nDev, due)
 
     crt_msg(numStr)
 

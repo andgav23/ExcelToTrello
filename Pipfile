@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 xlwings = "*"
 requests = "*"
+datetime = "*"
 
 [requires]
 python_version = "3.9"
