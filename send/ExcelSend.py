@@ -14,6 +14,8 @@ def main(numStr):
         # функция отправки запроса API Trello
         url = "https://api.trello.com/1/cards"
         # доска КТО '5f7f5031a39ace11ae0cefea'
+        # ID Пшеничников 5f97f43e32ca2328de00534f
+
         query = {
            'key': '04403aaa312416004ec400c73c48a811',
            'token': '51fe87fbdffd3b558b342bc6e6eb43e96c6e6f26b850c25956aaf5212f515ebc',
