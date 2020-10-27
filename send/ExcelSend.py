@@ -17,10 +17,11 @@ def main(numStr):
         query = {
            'key': '04403aaa312416004ec400c73c48a811',
            'token': '51fe87fbdffd3b558b342bc6e6eb43e96c6e6f26b850c25956aaf5212f515ebc',
-           'idList': '5f843bbdfa40fd77f31f414c',
+           'idList': '5f7f5031a39ace11ae0cefea',
            'name' : name,
            'desc' : nDev,
            'due' : due,
+            'idMembers' : '5f97f43e32ca2328de00534f'
         }
         response = requests.request(
            "POST",
