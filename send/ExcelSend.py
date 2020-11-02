@@ -15,6 +15,7 @@ def main(numStr):
         url = "https://api.trello.com/1/cards"
         # доска КТО '5f7f5031a39ace11ae0cefea'
         # ID Пшеничников 5f97f43e32ca2328de00534f
+        # ID Карпушкина  5f9a736a41543e48b873059c
 
         query = {
            'key': '04403aaa312416004ec400c73c48a811',
@@ -23,7 +24,7 @@ def main(numStr):
            'name' : name,
            'desc' : nDev,
            'due' : due,
-            'idMembers' : '5f97f43e32ca2328de00534f'
+            'idMembers' : '5f97f43e32ca2328de00534f',
         }
         response = requests.request(
            "POST",
